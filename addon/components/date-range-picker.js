@@ -6,6 +6,7 @@ export default Ember.Component.extend({
   attributeBindings: ['start', 'end', 'serverFormat'],
   start: undefined,
   end: undefined,
+  firstDay: 0,
   minDate: undefined,
   maxDate: undefined,
   timePicker: false,
@@ -71,7 +72,8 @@ export default Ember.Component.extend({
       autoApply: this.get('autoApply'),
       locale: {
         cancelLabel: this.get('cancelLabel'),
-        format: this.get('format')
+        format: this.get('format'),
+        firstDay: this.get('firstDay')
       },
       startDate: startDate,
       endDate: endDate,
